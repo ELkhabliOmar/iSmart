@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">iSmart</string>
+    <string name="mapbox_access_token">sk.eyJ1IjoiZWxraGFibGlvbWFyIiwiYSI6ImNsdDJyOGc2OTFpZ24ya3AyYm14YWU5ZjkifQ.M6xdrLnAPzlYT6zEJS1Auw</string>
+
+</resources>
