@@ -4,6 +4,7 @@ plugins {
 
 android {
     compileSdk 34
+    namespace 'com.example.iSmart'
 
     defaultConfig {
         applicationId "com.example.iSmart"
@@ -20,6 +21,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    buildFeatures{
+        viewBinding true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -42,4 +46,11 @@ dependencies {
     implementation 'com.mapbox.maps:android:10.16.0'
     // If you're using compose also add the compose extension
     // implementation 'com.mapbox.extension:maps-compose:$CONSTANTS::MAP_SDK_VERSION'
+    //pour navigaton
+    implementation 'com.mapbox.navigation:android:2.15.2'
+
+    def lifecycle_version = "2.5.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+
 }
