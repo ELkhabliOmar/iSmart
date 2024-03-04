@@ -97,7 +97,7 @@ import kotlin.jvm.functions.Function1;
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     MapView mapView;
-    MaterialButton setRoute;
+    FloatingActionButton setRoute;
     FloatingActionButton focusLocationBtn;
     private final NavigationLocationProvider navigationLocationProvider = new NavigationLocationProvider();
     private MapboxRouteLineView routeLineView;
@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onActivityResult(Boolean result) {
             if (result) {
-                Toast.makeText(MainActivity.this, "Permission granted! Restart this app", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Permission granted! ", Toast.LENGTH_SHORT).show();
             }
         }
     });
@@ -248,22 +248,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
-                activityResultLauncher.launch(Manifest.permission.POST_NOTIFICATIONS);
-            }
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+//            if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+//                activityResultLauncher.launch(Manifest.permission.POST_NOTIFICATIONS);
+//            }
+//        }
 
-        if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                && ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            activityResultLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);
-            activityResultLauncher.launch(Manifest.permission.ACCESS_COARSE_LOCATION);
+//        if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+//                && ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+//            activityResultLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);
+//            activityResultLauncher.launch(Manifest.permission.ACCESS_COARSE_LOCATION);
+//
+//        } else {
+//            mapboxNavigation.startTripSession();
+//        }
 
-        } else {
-            mapboxNavigation.startTripSession();
-        }
-
-        focusLocationBtn.hide();
+        //############# hide to show()
+        focusLocationBtn.show();
         LocationComponentPlugin locationComponentPlugin = getLocationComponent(mapView);
         getGestures(mapView).addOnMoveListener(onMoveListener);
 
@@ -277,7 +278,7 @@ public class MainActivity extends AppCompatActivity {
         mapView.getMapboxMap().loadStyleUri(Style.SATELLITE, new Style.OnStyleLoaded() {
             @Override
             public void onStyleLoaded(@NonNull Style style) {
-                mapView.getMapboxMap().setCamera(new CameraOptions.Builder().zoom(20.0).build());
+                mapView.getMapboxMap().setCamera(new CameraOptions.Builder().zoom(1.5).build());
                 locationComponentPlugin.setEnabled(true);
                 locationComponentPlugin.setLocationProvider(navigationLocationProvider);
                 getGestures(mapView).addOnMoveListener(onMoveListener);
@@ -312,13 +313,22 @@ public class MainActivity extends AppCompatActivity {
                 focusLocationBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                                && ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                            activityResultLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);
+                            activityResultLauncher.launch(Manifest.permission.ACCESS_COARSE_LOCATION);
+
+                        } else {
+                            mapboxNavigation.startTripSession();
+                        }
                         if (!LocationUtils.isLocationEnabled(MainActivity.this)) {
                             Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
                             startActivity(intent);
                         }
                         focusLocation = true;
                         getGestures(mapView).addOnMoveListener(onMoveListener);
-                        focusLocationBtn.hide();
+                        //############# hide to show()
+                        focusLocationBtn.show();
                     }
                 });
             }
@@ -362,7 +372,7 @@ public class MainActivity extends AppCompatActivity {
             public void onSuccess(LocationEngineResult result) {
                 Location location = result.getLastLocation();
                 setRoute.setEnabled(false);
-                setRoute.setText("Fetching route...");
+                //setRoute.setText("Fetching route...");
                 RouteOptions.Builder builder = RouteOptions.builder();
                 Point origin = Point.fromLngLat(Objects.requireNonNull(location).getLongitude(), location.getLatitude());
                 builder.coordinatesList(Arrays.asList(origin, point));
@@ -377,13 +387,13 @@ public class MainActivity extends AppCompatActivity {
                         mapboxNavigation.setNavigationRoutes(list);
                         focusLocationBtn.performClick();
                         setRoute.setEnabled(true);
-                        setRoute.setText("Set route");
+                        //setRoute.setText("Set route");
                     }
 
                     @Override
                     public void onFailure(@NonNull List<RouterFailure> list, @NonNull RouteOptions routeOptions) {
                         setRoute.setEnabled(true);
-                        setRoute.setText("Set route");
+                      //  setRoute.setText("Set route");
                         Toast.makeText(MainActivity.this, "Route request failed", Toast.LENGTH_SHORT).show();
                     }
 
