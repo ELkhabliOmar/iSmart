@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.iSmart">
@@ -7,6 +9,8 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Include only if your app benefits from precise location access. -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+
 
 
     <application
@@ -19,6 +23,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FloatingActionButton"
         tools:targetApi="31">
+
+
+
         <activity
             android:name="com.example.iSmart.MainActivity"
             android:exported="true">
@@ -29,5 +36,7 @@
             </intent-filter>
         </activity>
     </application>
+
+
 
 </manifest>

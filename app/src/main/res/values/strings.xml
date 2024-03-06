@@ -3,5 +3,7 @@
     <string name="mapbox_access_token">sk.eyJ1IjoiZWxraGFibGlvbWFyIiwiYSI6ImNsdDJyOGc2OTFpZ24ya3AyYm14YWU5ZjkifQ.M6xdrLnAPzlYT6zEJS1Auw</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="Pass_fragment">Hello blank fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
