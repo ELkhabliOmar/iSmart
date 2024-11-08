@@ -59,18 +59,21 @@ Affiche les points d’intérêt (restaurants, stations-service, etc.) le long d
 <div style="display: flex; justify-content: space-around; align-items: center;">
   <img src="https://github.com/user-attachments/assets/d9873cc5-401c-42a0-8d2f-d3c0a64162ae" alt="Testimonial 4" width="400" height="800" />
 </div>
+
 <div style="display: flex; justify-content: space-around; align-items: center;">
-  <img src="(https://github.com/user-attachments/assets/27a0abfb-19df-458c-adc9-2f05a922e36f" alt="Testimonial 4" width="400" height="800" />
+  <img src="https://github.com/user-attachments/assets/b31d286a-3ecb-452f-bc0a-6d8acdcf9b3c" alt="Testimonial 4" width="400" height="800" />
 </div>
+<div style="display: flex; justify-content: space-around; align-items: center;">
+  <img src="https://github.com/user-attachments/assets/27a0abfb-19df-458c-adc9-2f05a922e36f" alt="Testimonial 4" width="400" height="800" />
+</div>
+
 <div style="display: flex; justify-content: space-around; align-items: center;">
   <img src="https://github.com/user-attachments/assets/3d977d6f-7dc4-4929-bcdb-8b2a2011732e" alt="Testimonial 4" width="400" height="800" />
 </div>
 <div style="display: flex; justify-content: space-around; align-items: center;">
   <img src="https://github.com/user-attachments/assets/41148925-1f40-495d-865c-44d8ebb8704a" alt="Testimonial 4" width="400" height="800" />
 </div>
-<div style="display: flex; justify-content: space-around; align-items: center;">
-  <img src="https://github.com/user-attachments/assets/b31d286a-3ecb-452f-bc0a-6d8acdcf9b3c" alt="Testimonial 4" width="400" height="800" />
-</div>
+
 
 
 ## L'instalation :
@@ -78,15 +81,12 @@ Affiche les points d’intérêt (restaurants, stations-service, etc.) le long d
 Pour exécuter l’application mobile localement, suivre l'étape suivante :
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/ELkhabliOmar/gestionDesEtudiants
-
-<div style="display: flex; justify-content: space-around; align-items: center;">
-  <img src="https://github.com/ELkhabliOmar/gestionDesEtudiants/assets/143323403/41586c18-4b8c-4c79-83cc-0b19b46d6695" alt="Testimonial 4" width="200" height="415" />
-</div>
+   git clone https://github.com/ELkhabliOmar/iSmart.git
 
 
-### [Youtube](https://www.youtube.com/watch?v=gABRP6nKi1U&t=3s) - Vidéo explicative d'application
-### [Rapport d'application_de la gestion_de_classe.pdf](https://github.com/ELkhabliOmar/gestionDesEtudiants/files/14157651/application_gestion_de_classe.pdf)
+
+
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 
