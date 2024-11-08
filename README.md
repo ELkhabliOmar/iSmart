@@ -57,11 +57,22 @@ Affiche les points d’intérêt (restaurants, stations-service, etc.) le long d
 
 
 <div style="display: flex; justify-content: space-around; align-items: center;">
-  <img src="https://github.com/ELkhabliOmar/gestionDesEtudiants/assets/143323403/5c5b1a9a-74a5-4631-9470-24ba27f40c7b" alt="Testimonial 4" width="800" height="500" />
+  <img src="https://github.com/user-attachments/assets/d9873cc5-401c-42a0-8d2f-d3c0a64162ae" alt="Testimonial 4" width="400" height="800" />
 </div>
 <div style="display: flex; justify-content: space-around; align-items: center;">
-  <img src="https://github.com/ELkhabliOmar/gestionDesEtudiants/assets/143323403/ec807809-0cae-4ec3-9be2-e44a9027d299" alt="Testimonial 4" width="1000" height="1200" />
+  <img src="(https://github.com/user-attachments/assets/27a0abfb-19df-458c-adc9-2f05a922e36f" alt="Testimonial 4" width="400" height="800" />
 </div>
+<div style="display: flex; justify-content: space-around; align-items: center;">
+  <img src="https://github.com/user-attachments/assets/3d977d6f-7dc4-4929-bcdb-8b2a2011732e" alt="Testimonial 4" width="400" height="800" />
+</div>
+<div style="display: flex; justify-content: space-around; align-items: center;">
+  <img src="https://github.com/user-attachments/assets/41148925-1f40-495d-865c-44d8ebb8704a" alt="Testimonial 4" width="400" height="800" />
+</div>
+<div style="display: flex; justify-content: space-around; align-items: center;">
+  <img src="https://github.com/user-attachments/assets/b31d286a-3ecb-452f-bc0a-6d8acdcf9b3c" alt="Testimonial 4" width="400" height="800" />
+</div>
+
+
 ## L'instalation :
 
 Pour exécuter l’application mobile localement, suivre l'étape suivante :
